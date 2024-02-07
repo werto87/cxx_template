@@ -1,11 +1,7 @@
-#include <st_tree.h>
-
-using namespace st_tree;
-
+#include "src/hello.hxx"
 int
 main ()
 {
-  tree<int> t;
-  t.insert(1);
-  return 0;
+  using namespace boost::asio::experimental::awaitable_operators;
+  auto test = helloWorld () && helloWorld ();
 }
