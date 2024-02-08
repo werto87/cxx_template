@@ -8,7 +8,7 @@ COPY main.cxx /home/conan/cxx_template
 
 WORKDIR /home/conan/cxx_template
 
-RUN sudo chown -R conan /home/conan  && conan remote add artifactory http://195.128.100.39:8081/artifactory/api/conan/conan-local && conan install . --output-folder=build --settings build_type=Release  --settings compiler.cppstd=gnu20 --build=missing
+RUN sudo chown -R conan /home/conan  && conan install . --output-folder=build --settings build_type=Release  --settings compiler.cppstd=gnu20 --build=missing
 
 WORKDIR /home/conan/cxx_template/build
 
