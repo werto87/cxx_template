@@ -1,9 +1,6 @@
 cmake_minimum_required(VERSION 3.15.7)
 set(CMAKE_CXX_STANDARD 20)
-project(
-        myproject
-        VERSION 0.0.1
-        LANGUAGES CXX C)
+project(myproject)
 add_subdirectory(src)
 add_executable(run_server main.cxx)
 target_link_libraries(run_server cxx_template)
