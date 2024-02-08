@@ -3,11 +3,15 @@
 #include <boost/asio/experimental/awaitable_operators.hpp>
 
 boost::asio::awaitable<void> helloWorld() {
-  using namespace boost::asio::experimental::awaitable_operators;
-  auto ioContext = boost::asio::io_context{};
-  boost::asio::ip::tcp::socket socket(ioContext);
-  auto test = socket.async_connect({}, boost::asio::use_awaitable) &&
-              socket.async_connect({}, boost::asio::use_awaitable);
+    namespace asio = boost::asio;
+    using asio::ip::tcp;
+    using namespace asio::experimental::awaitable_operators;
+
+    tcp::socket s(co_await asio::this_coro::executor);
+    auto token = asio::use_awaitable;
+    co_await (s.async_connect({}, token) && s.async_connect({}, token));
+
+    co_return;
 }
 
 int abc() { return 42; }
