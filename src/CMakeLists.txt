@@ -11,10 +11,10 @@ add_library(cxx_template hello.cxx)
 add_library(myproject::cxx_template ALIAS cxx_template)
 
 
-find_package(small_memory_tree)
+find_package(Boost)
 target_link_libraries(cxx_template PUBLIC
-small_memory_tree::small_memory_tree
-        )
+        boost::boost
+)
 
 target_include_directories(cxx_template INTERFACE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/include>)

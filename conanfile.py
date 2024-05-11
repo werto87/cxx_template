@@ -20,4 +20,4 @@ class Project(ConanFile):
 
     def requirements(self):
         self.requires("catch2/2.13.7")
-        self.requires("small_memory_tree/4.1.1")
+        self.requires("boost/1.85.0")
