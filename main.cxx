@@ -1,5 +1,4 @@
 #include "src/hello.hxx"
-#include <format>
 #include <print>
 
 int
