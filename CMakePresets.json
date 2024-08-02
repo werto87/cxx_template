@@ -14,7 +14,8 @@
                 "CMAKE_C_COMPILER": "clang",
                 "CMAKE_CXX_COMPILER": "clang++",
                 "CMAKE_CXX_FLAGS": "-stdlib=libc++  -fstack-usage",
-                "CMAKE_EXE_LINKER_FLAGS": "-stdlib=libc++"
+                "CMAKE_EXE_LINKER_FLAGS": "-stdlib=libc++",
+                "myproject_ENABLE_CLANG_BUILD_ANALYZER": "OFF"
             }
         },
         {
@@ -31,7 +32,8 @@
                 "CMAKE_CXX_COMPILER": "clang++",
                 "CMAKE_CXX_FLAGS": "-stdlib=libc++ -fstack-usage",
                 "CMAKE_EXE_LINKER_FLAGS": "-stdlib=libc++",
-                "myproject_ENABLE_HARDENING": "OFF"
+                "myproject_ENABLE_HARDENING": "OFF",
+                "myproject_ENABLE_CLANG_BUILD_ANALYZER": "OFF"
             }
         },
         {
