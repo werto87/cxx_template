@@ -13,7 +13,7 @@ add_library(myproject::cxx_template ALIAS cxx_template)
 
 find_package(Boost)
 target_link_libraries(cxx_template PUBLIC
-        boost::boost
+        Boost::headers
         myproject_options
         myproject_warnings
 )
