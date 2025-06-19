@@ -26,6 +26,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_custom_target(copy_compile_commands_json ALL
                   DEPENDS ${CMAKE_SOURCE_DIR}/compile_commands.json)
 
+if(NOT CMAKE_GENERATOR MATCHES "Visual Studio")
 add_custom_command(
   DEPENDS ${CMAKE_BINARY_DIR}/compile_commands.json
   OUTPUT ${CMAKE_SOURCE_DIR}/compile_commands.json
@@ -38,3 +39,4 @@ include(cmake/ClangBuildAnalyzer.cmake)
 IF (myproject_ENABLE_CLANG_BUILD_ANALYZER)
         myproject_enable_clang_build_analyzer(run_main)
 ENDIF ()
+endif()
