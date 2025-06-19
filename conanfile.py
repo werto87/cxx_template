@@ -18,5 +18,5 @@ class Project(ConanFile):
         self.options["catch2"].with_benchmark = True
 
     def requirements(self):
-        self.requires("catch2/2.13.7")
+        self.requires("catch2/3.8.1")
         self.requires("boost/1.86.0")
