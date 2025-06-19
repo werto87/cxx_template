@@ -18,8 +18,10 @@ target_link_libraries(cxx_template PUBLIC
         myproject_warnings
 )
 
-target_include_directories(cxx_template INTERFACE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
-        $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/include>)
+target_include_directories(cxx_template
+        PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}>
+        )
 
 target_compile_features(cxx_template PUBLIC cxx_std_20)
 
