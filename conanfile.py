@@ -19,4 +19,4 @@ class Project(ConanFile):
 
     def requirements(self):
         self.requires("catch2/3.8.1")
-        self.requires("boost/1.86.0")
+        self.requires("boost/1.90.0")
